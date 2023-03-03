@@ -4,7 +4,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 
 public class SharedPrefManager {
-
+//
     private SharedPreferences sharedPreferences;
 
     private static final String SHARED_PREF_NAME = "sharedPreferencesUser";
