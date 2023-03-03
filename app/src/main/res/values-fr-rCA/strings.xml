@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">WEApplication</string>
+    <!--Donation Activity-->
+    <string name="text_summary">Résumé</string>
+    <string name="text_enter_amount">Somme d\'argent</string>
+    <string name="text_sub_title_min_value">Vous pouvez donner n\'importe quelle somme d\'argent que vous voulez, ce sera plus de 5 $</string>
+    <string name="text_confirmation">Confirmer</string>
+    <!--Forgot Password-->
+    <string name="text_forgot">Mot de passe oublié?</string>
+    <string name="text_forgot_sub_title">Entrez votre email ci-dessous, pour avoir la possibilité de vous envoyer le lien de réparation du mot de passe</string>
+    <string name="text_forgot_recover">Récupérer</string>
+    <!--Entries-->
+    <string name="email">E-mail</string>
+    <string name="password">Mot de passe</string>
+    <string name="name">Nom</string>
+    <string name="phone">Téléphone</string>
+
+    <!--login-->
+    <string name="text_login_welcome">Bienvenue à</string>
+    <string name="text_log_in_button">Connexion</string>
+    <string name="text_login_question">Vous n\'avez pas de compte?</string>
+    <string name="text_sign_up">S\'inscrire</string>
+
+    <!--Main Activity-->
+    <string name="text_hello">Salut les Canadiens!</string>
+    <string name="text_convincing">Nettoyons les rues de Toronto</string>
+    <string name="text_donors">DONATEURS\n/DONATRICES</string>
+    <string name="text_raised">SOULEVÉ</string>
+    <string name="text_goal">BUT</string>
+    <string name="text_story">Chacun a sa propre histoire</string>
+    <string name="text_title_learn_more">Comment vos dons sont-ils utilisés?</string>
+    <string name="text_learn_more_button">Apprendre encore plus</string>
+    <string name="text_donate">Donner</string>
+
+    <!--Profile Activity-->
+    <string name="text_edit">Editer le profil</string>
+    <string name="text_description">Description</string>
+    <string name="text_donation_history">Historique de vos dons</string>
+    <string name="text_sign_out">Se déconnecter</string>
+
+    <!--SignUp Activity-->
+    <string name="text_create">Créé un</string>
+    <string name="text_account">compte</string>
+    <!--Update Activity-->
+    <string name="text_update">Compte</string>
+    <!--Learn More Fragment-->
+    <string name="text_breakdown">Répartition des dons</string>
+    <string name="text_info">Information</string>
+    <string name="text_sub_title_in_learn_more">L\'application WE nous aide à lutter contre l\'itinérance à Toronto et à investir pour y mettre fin. Ce n\'est pas LEUR problème, c\'est notre problème !</string>
+    <string name="text_home_and_education">Accueil &amp; Éducation</string>
+    <string name="text_food">Nourriture</string>
+    <string name="text_medicine">Médecine</string>
+    <string name="text_expenses">Dépenses</string>
+    <string name="text_ad">Publicité</string>
+
+    <!--Settings Fragment-->
+    <string name="text_settings">Paramètres</string>
+    <string name="text_share">Partager</string>
+    <string name="text_feedback">Retour</string>
+    <string name="text_theme">Thème</string>
+    <string name="text_quit">Arrêter</string>
+    <string name="sub_title_text_quit">Voulez-vous vraiment quitter l\'application?</string>
+    <string name="yes_button">Oui</string>
+    <string name="no_button">Non</string>
+
+
+
+</resources>
