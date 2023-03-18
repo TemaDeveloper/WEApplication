@@ -1,6 +1,5 @@
 package com_we.java_we.weapplication.adapters;
 
-import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,11 +16,9 @@ import com_we.java_we.weapplication.models.Donation;
 public class AdapterMyDonations extends RecyclerView.Adapter<AdapterMyDonations.MyDonationViewHolder> {
 
     private List<Donation> donations;
-    private Context context;
 
-    public AdapterMyDonations(List<Donation> donations, Context context) {
+    public AdapterMyDonations(List<Donation> donations) {
         this.donations = donations;
-        this.context = context;
     }
 
     @NonNull
@@ -34,8 +31,7 @@ public class AdapterMyDonations extends RecyclerView.Adapter<AdapterMyDonations.
     @Override
     public void onBindViewHolder(@NonNull MyDonationViewHolder holder, int position) {
         holder.date.setText(donations.get(position).getDate());
-        int sum = donations.get(position).getValue() + 6000;
-        holder.value.setText(donations.get(position).getValue() + " CAD" + " -> " + sum + " CAD");
+        holder.value.setText(donations.get(position).getValue() + " CAD");
     }
 
     @Override

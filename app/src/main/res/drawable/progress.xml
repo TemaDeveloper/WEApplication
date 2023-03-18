@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <!--seekbar progress background color--><item android:id="@android:id/background"><shape android:shape="rectangle"><corners android:radius="20dp"/><solid android:color="@android:color/transparent" />
+    <!--seekbar progress background color--><item android:id="@android:id/background">
+    <shape android:shape="rectangle"><corners android:radius="20dp"/>
+        <solid android:color="@color/light_blue" />
 
 </shape></item>
 
 
-    <!--seekbar progress color--><item android:id="@android:id/progress"><clip><shape android:shape="rectangle"><corners android:radius="20dp"/><solid android:color="@color/blue" />
+    <!--seekbar progress color--><item android:id="@android:id/progress"><clip>
+    <shape android:shape="rectangle"><corners android:radius="20dp"/>
+        <solid android:color="@color/blue" />
 
 </shape></clip></item>
 

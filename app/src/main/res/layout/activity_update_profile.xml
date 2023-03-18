@@ -4,18 +4,43 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/image_view_profile_background"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_layout_image_changer"
         android:layout_width="match_parent"
         android:layout_height="350dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/img_1_homelessness" />
+        android:layout_gravity="center_horizontal">
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="350dp"
-        android:alpha="1"
-        android:src="@color/yellow" />
+
+        <ImageView
+            android:id="@+id/image_view_profile"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img_1_homelessness" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha=".3"
+            android:src="@color/yellow" />
+
+        <ImageView
+            android:id="@+id/image_effect"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:rotation="180"
+            android:src="@drawable/effect_dark" />
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_camera"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/white" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ImageView
         android:id="@+id/image_view_back"
@@ -26,150 +51,76 @@
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="20dp"
         android:src="@drawable/ic_back"
-        app:tint="@color/black" />
+        app:tint="@color/white" />
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/image_view_back"
-        android:layout_marginTop="50dp">
+        android:layout_below="@+id/constraint_layout_image_changer">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <androidx.cardview.widget.CardView
+            <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="35dp"
-                android:layout_marginEnd="35dp"
-                app:cardCornerRadius="13dp"
-                app:cardElevation="6dp"
-                app:cardPreventCornerOverlap="true"
-                app:cardUseCompatPadding="true">
+                app:cardCornerRadius="14dp"
+                app:cardElevation="8dp"
+                android:layout_margin="20dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_margin="16dp"
                     android:orientation="vertical">
 
-                    <de.hdodenhof.circleimageview.CircleImageView
-                        android:id="@+id/image_view_profile"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_marginTop="20dp"
-                        android:src="@drawable/img_1_homelessness" />
 
-                    <EditText
-                        android:id="@+id/text_view_name"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_marginTop="20dp"
-                        android:fontFamily="@font/font_radio_canada"
-                        android:gravity="center_horizontal"
-                        android:text="Artemii"
-                        android:theme="@style/Theme.EditTextColors"
-                        android:textColor="@color/title_text_color"
-                        android:textSize="20sp" />
+                <EditText
+                    android:id="@+id/edit_text_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/font_radio_canada"
+                    android:gravity="center_horizontal"
+                    android:text="Artemii"
+                    android:textColor="@color/title_text_color"
+                    android:textSize="20sp"
+                    android:theme="@style/Theme.EditTextColors" />
 
-                    <EditText
-                        android:id="@+id/text_view_email"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_marginTop="5dp"
-                        android:theme="@style/Theme.EditTextColors"
-                        android:fontFamily="@font/font_radio_canada"
-                        android:gravity="center_horizontal"
-                        android:textColor="@color/title_text_color"
-                        android:text="artemii@gmail.com"
-                        android:textSize="16sp" />
-
-                    <EditText
-                        android:id="@+id/text_view_country"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:theme="@style/Theme.EditTextColors"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginBottom="20dp"
-                        android:fontFamily="@font/font_radio_canada"
-                        android:gravity="center_horizontal"
-                        android:text="Canada"
-                        android:textColor="@color/title_text_color"
-                        android:textSize="16sp" />
-
-
-
+                <EditText
+                    android:id="@+id/edit_text_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="20dp"
+                    android:fontFamily="@font/font_radio_canada"
+                    android:gravity="center_horizontal"
+                    android:text="artemii@gmail.com"
+                    android:textColor="@color/title_text_color"
+                    android:textSize="16sp"
+                    android:theme="@style/Theme.EditTextColors" />
                 </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="35dp"
-                android:layout_marginEnd="35dp"
-                app:cardCornerRadius="13dp"
-                app:cardElevation="6dp"
-                app:cardPreventCornerOverlap="true"
-                app:cardUseCompatPadding="true">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_margin="16dp"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_marginTop="20dp"
-                        android:fontFamily="@font/font_radio_canada"
-                        android:gravity="center_horizontal"
-                        android:text="@string/text_description"
-                        android:textColor="@color/title_text_color"
-                        android:textSize="20sp" />
-
-                    <EditText
-                        android:id="@+id/text_view_about"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:theme="@style/Theme.EditTextColors"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginBottom="20dp"
-                        android:textColor="@color/title_text_color"
-                        android:fontFamily="@font/font_radio_canada"
-                        android:gravity="center_horizontal"
-                        android:text="Canada"
-                        android:textSize="16sp" />
+            </com.google.android.material.card.MaterialCardView>
 
 
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/button_done_editing"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="60dp"
                 android:layout_gravity="center"
                 android:layout_marginHorizontal="16dp"
-                android:layout_marginVertical="16dp"
+                android:layout_marginBottom="16dp"
                 android:backgroundTint="@color/yellow"
                 android:elevation="8dp"
-                android:gravity="center"
-                android:textStyle="bold"
-                android:text="@string/text_update"
                 android:fontFamily="@font/font_radio_canada"
+                android:gravity="center"
+                android:text="@string/text_update"
                 android:textAllCaps="false"
                 android:textColor="@color/black"
+                android:textStyle="bold"
                 app:cornerRadius="14dp" />
 
 

@@ -1,254 +1,247 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:background="@color/background_nav_color">
+    android:padding="20dp">
 
-    <LinearLayout
+
+    <View
+        android:layout_width="30dp"
+        android:layout_height="5dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/background_view_hide_bottom_sheet"
+        android:backgroundTint="@color/title_text_color" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginVertical="20dp"
+        android:fontFamily="@font/font_radio_canada"
+        android:text="@string/text_settings"
+        android:textColor="@color/title_text_color"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+
+    <RelativeLayout
+        android:id="@+id/lin_share_app"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:padding="20dp">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
-        <View
-            android:layout_width="30dp"
-            android:layout_height="5dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="20dp"
-            android:backgroundTint="@color/title_text_color"
-            android:background="@drawable/background_view_hide_bottom_sheet" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_share"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="5dp"
+            android:elevation="4dp"
+            app:cardCornerRadius="4dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/dark_blue"
+                android:elevation="10dp"
+                android:padding="8dp"
+                android:src="@drawable/ic_share"
+                app:tint="@color/white" />
+
+        </com.google.android.material.card.MaterialCardView>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/text_settings"
-            android:textSize="20sp"
-            android:textColor="@color/title_text_color"
-            android:textStyle="bold"
-            android:layout_gravity="center_horizontal"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="16dp"
+            android:layout_toEndOf="@+id/card_share"
             android:fontFamily="@font/font_radio_canada"
-            android:layout_marginVertical="20dp"/>
+            android:text="@string/text_share"
+            android:textColor="@color/title_text_color"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:padding="5dp"
+            android:src="@drawable/ic_arrow"
+            app:tint="@color/title_text_color" />
+
+    </RelativeLayout>
 
 
-        <RelativeLayout
-            android:id="@+id/lin_share_app"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+    <RelativeLayout
+        android:id="@+id/lin_feed_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
-
-            <com.google.android.material.card.MaterialCardView
-                android:id="@+id/card_share"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                app:cardCornerRadius="4dp"
-                android:elevation="4dp"
-                android:layout_margin="5dp">
-
-                <ImageView
-                    android:padding="8dp"
-                    android:elevation="10dp"
-                    app:tint="@color/white"
-                    android:background="@color/dark_blue"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/ic_share"/>
-
-            </com.google.android.material.card.MaterialCardView>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_gravity="center_vertical"
-                android:layout_marginLeft="16dp"
-                android:layout_toEndOf="@+id/card_share"
-                android:fontFamily="@font/font_radio_canada"
-                android:text="@string/text_share"
-                android:textColor="@color/title_text_color"
-                android:textSize="16sp" />
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_feedback"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="5dp"
+            android:elevation="4dp"
+            app:cardCornerRadius="4dp">
 
             <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:layout_marginRight="8dp"
-                android:padding="5dp"
-                android:src="@drawable/ic_arrow"
-                app:tint="@color/title_text_color" />
-
-        </RelativeLayout>
-
-
-        <RelativeLayout
-            android:id="@+id/lin_feed_back"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <com.google.android.material.card.MaterialCardView
-                android:id="@+id/card_feedback"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                app:cardCornerRadius="4dp"
-                android:elevation="4dp"
-                android:layout_margin="5dp">
-
-                <ImageView
-                    android:padding="8dp"
-                    android:elevation="10dp"
-                    app:tint="@color/white"
-                    android:background="@color/green"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/ic_feedback"/>
-
-            </com.google.android.material.card.MaterialCardView>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_gravity="center_vertical"
-                android:layout_marginLeft="16dp"
-                android:layout_toEndOf="@+id/card_feedback"
-                android:fontFamily="@font/font_radio_canada"
-                android:text="@string/text_feedback"
-                android:textColor="@color/title_text_color"
-                android:textSize="16sp" />
-
-            <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:layout_marginRight="8dp"
-                android:padding="5dp"
-                android:src="@drawable/ic_arrow"
-                app:tint="@color/title_text_color" />
-
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:id="@+id/lin_night_theme_switching"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <com.google.android.material.card.MaterialCardView
-                android:id="@+id/card_night_theme_switching"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                app:cardCornerRadius="4dp"
-                android:elevation="4dp"
-                android:layout_margin="5dp">
-
-                <ImageView
-                    android:padding="8dp"
-                    android:elevation="10dp"
-                    app:tint="@color/white"
-                    android:background="@color/purple_200"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/ic_night"/>
-
-            </com.google.android.material.card.MaterialCardView>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_gravity="center_vertical"
-                android:layout_marginLeft="16dp"
-                android:layout_toEndOf="@+id/card_night_theme_switching"
-                android:fontFamily="@font/font_radio_canada"
-                android:text="@string/text_theme"
-                android:textColor="@color/title_text_color"
-                android:textSize="16sp" />
-
-            <com.airbnb.lottie.LottieAnimationView
-                android:id="@+id/switcher"
-                android:layout_width="60dp"
-                android:layout_height="35dp"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:layout_marginRight="8dp"
-                app:lottie_rawRes="@raw/switcher" />
-
-        </RelativeLayout>
-
-        <LinearLayout
-            android:id="@+id/lin_change_language"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                app:cardCornerRadius="4dp"
-                android:elevation="4dp"
-                android:layout_margin="5dp">
-
-                <ImageView
-                    android:padding="8dp"
-                    android:elevation="10dp"
-                    app:tint="@color/white"
-                    android:background="@color/yellow"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/ic_language"/>
-
-            </com.google.android.material.card.MaterialCardView>
-
-            <Spinner
-                android:id="@+id/spinner_languages"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"/>
+                android:layout_height="match_parent"
+                android:background="@color/green"
+                android:elevation="10dp"
+                android:padding="8dp"
+                android:src="@drawable/ic_feedback"
+                app:tint="@color/white" />
 
-        </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
 
-        <LinearLayout
-            android:id="@+id/lin_quit"
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="16dp"
+            android:layout_toEndOf="@+id/card_feedback"
+            android:fontFamily="@font/font_radio_canada"
+            android:text="@string/text_feedback"
+            android:textColor="@color/title_text_color"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:padding="5dp"
+            android:src="@drawable/ic_arrow"
+            app:tint="@color/title_text_color" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/lin_night_theme_switching"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_night_theme_switching"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="5dp"
+            android:elevation="4dp"
+            app:cardCornerRadius="4dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/purple_200"
+                android:elevation="10dp"
+                android:padding="8dp"
+                android:src="@drawable/ic_night"
+                app:tint="@color/white" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="16dp"
+            android:layout_toEndOf="@+id/card_night_theme_switching"
+            android:fontFamily="@font/font_radio_canada"
+            android:text="@string/text_theme"
+            android:textColor="@color/title_text_color"
+            android:textSize="16sp" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/switcher"
+            android:layout_width="60dp"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            app:lottie_rawRes="@raw/switcher" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/lin_change_language"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="5dp"
+            android:elevation="4dp"
+            app:cardCornerRadius="4dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/yellow"
+                android:elevation="10dp"
+                android:padding="8dp"
+                android:src="@drawable/ic_language"
+                app:tint="@color/white" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <Spinner
+            android:id="@+id/spinner_languages"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="16dp">
+            android:layout_gravity="center_vertical" />
 
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                app:cardCornerRadius="4dp"
-                android:elevation="4dp"
-                android:layout_margin="5dp">
+    </LinearLayout>
 
-                <ImageView
-                    android:padding="8dp"
-                    android:elevation="10dp"
-                    app:tint="@color/white"
-                    android:background="@color/red"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/ic_quit"/>
+    <LinearLayout
+        android:id="@+id/lin_quit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
 
-            </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_margin="5dp"
+            android:elevation="4dp"
+            app:cardCornerRadius="4dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:textColor="@color/red"
-                android:textSize="16sp"
-                android:fontFamily="@font/font_radio_canada"
-                android:layout_marginLeft="16dp"
-                android:text="@string/text_quit"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/red"
+                android:elevation="10dp"
+                android:padding="8dp"
+                android:src="@drawable/ic_quit"
+                app:tint="@color/white" />
 
-        </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="16dp"
+            android:fontFamily="@font/font_radio_canada"
+            android:text="@string/text_quit"
+            android:textColor="@color/red"
+            android:textSize="16sp" />
 
     </LinearLayout>
 

@@ -13,9 +13,9 @@
             android:id="@+id/text_view_my_value"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="6, 000 + 890 CAD -> 6, 890 CAD"
+            android:text="6, 000"
             android:textColor="@color/title_text_color"
-            android:textSize="20sp"
+            android:textSize="16sp"
             android:fontFamily="@font/font_radio_canada" />
 
         <TextView

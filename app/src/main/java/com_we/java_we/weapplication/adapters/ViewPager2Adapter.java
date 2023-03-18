@@ -20,13 +20,12 @@ public class ViewPager2Adapter extends RecyclerView.Adapter<ViewPager2Adapter.Vi
     private List<Person> people;
     private Context context;
 
-    // Constructor of ViewPager2Adapter class
     public ViewPager2Adapter(List<Person> people, Context ctx) {
         this.context = ctx;
         this.people = people;
     }
 
-    // This method returns layout
+    //return layout
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -34,22 +33,20 @@ public class ViewPager2Adapter extends RecyclerView.Adapter<ViewPager2Adapter.Vi
         return new ViewHolder(view);
     }
 
-    // This method binds the screen with the view
+    //bind the screen with the view
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        // This will set the images in imageview
         holder.images.setImageResource(people.get(position).getImage());
         holder.nameAgeText.setText(people.get(position).getName() + ", " + people.get(position).getAge());
         holder.descriptionText.setText(people.get(position).getDescription());
     }
 
-    // This Method returns the size of the List
+    //return the size of the List
     @Override
     public int getItemCount() {
         return people.size();
     }
 
-    // The ViewHolder class holds the view
     public static class ViewHolder extends RecyclerView.ViewHolder {
         private ImageView images;
         private TextView nameAgeText, descriptionText;

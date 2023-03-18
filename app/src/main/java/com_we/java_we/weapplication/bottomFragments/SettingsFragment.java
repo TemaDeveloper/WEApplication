@@ -43,7 +43,6 @@ public class SettingsFragment extends BottomSheetDialogFragment implements View.
     //check the switcher
     private Boolean mode;
     //the spinner support
-    private String language;
     private String[] languages = {"Choose the language", "English", "Français"};
     private ArrayAdapter<String> languagesAdapter;
 
@@ -52,11 +51,7 @@ public class SettingsFragment extends BottomSheetDialogFragment implements View.
         View view = inflater.inflate(R.layout.fragment_settings, container, false);
 
         init(view);
-
-        languagesAdapter = new ArrayAdapter(getContext(), android.R.layout.simple_spinner_item, languages);
-        languagesAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinnerLanguages.setAdapter(languagesAdapter);
-        spinnerLanguages.setSelection(0);
+        setLanguagesAdapter();
 
         shareLayout.setOnClickListener(this);
         quitLayout.setOnClickListener(this);
@@ -75,15 +70,21 @@ public class SettingsFragment extends BottomSheetDialogFragment implements View.
             }
         });
 
+        //check mode
         if(mode == false){
             lottieSwitcher.setMinAndMaxProgress(0f, .5f);
         }else{
             lottieSwitcher.setMinAndMaxProgress(.5f, 1.0f);
         }
 
-
-
         return view;
+    }
+
+    private void setLanguagesAdapter(){
+        languagesAdapter = new ArrayAdapter(getContext(), android.R.layout.simple_spinner_item, languages);
+        languagesAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinnerLanguages.setAdapter(languagesAdapter);
+        spinnerLanguages.setSelection(0);
     }
 
     private void init(View view){
@@ -138,20 +139,18 @@ public class SettingsFragment extends BottomSheetDialogFragment implements View.
                 }
                 break;
             case R.id.lin_quit:
+                //initialize new alert dialog
                 final Dialog dialog = new Dialog(getActivity(), R.style.ThemeDialog);
-
                 dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-
+                //alert dialog options
                 dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
                 dialog.setCancelable(false);
                 dialog.setContentView(R.layout.alert_dialog_quit);
                 dialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
-
+                //initialize widgets in alert dialog
                 MaterialButton btnNo = dialog.findViewById(R.id.btn_no), btnYes = dialog.findViewById(R.id.btn_yes);
-
+                //click listener for buttons in alert dialog
                 btnNo.setOnClickListener(v -> dialog.dismiss());
-
-
                 btnYes.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {

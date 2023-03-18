@@ -38,6 +38,8 @@
     <string name="text_description">Description</string>
     <string name="text_donation_history">Your Donations History</string>
     <string name="text_sign_out">Sign out</string>
+    <string name="text_logged_in">Logged in</string>
+    <string name = "sub_title_no_donations">You do not have any donations yet...</string>
 
     <!--SignUp Activity-->
     <string name="text_create">Create an</string>
@@ -47,7 +49,7 @@
     <!--Learn More Fragment-->
     <string name="text_breakdown">Breakdown of donations</string>
     <string name="text_info">Information</string>
-    <string name="text_sub_title_in_learn_more">WE app helps us to fight with homelessness in Toronto and invest in ending of it.\nIt is not THEIR problem, it is our problem!</string>
+    <string name="text_sub_title_in_learn_more">WE is a charitable application designed to support homeless people in Toronto. The app serves as a platform for individuals who want to contribute towards the welfare of homeless people by providing them with monetary support.\n\nDonations can be made through the app, and the amount can be as little or as much as the user wants to contribute.\n\nOverall, WE is an excellent initiative that leverages technology to provide a platform for people to support the homeless community in Toronto. The app\'s simple and intuitive design makes it easy for anyone to contribute to the cause and help make a difference in the lives of those who need it most.</string>
     <string name="text_home_and_education">Home &amp; Education</string>
     <string name="text_food">Food</string>
     <string name="text_medicine">Medicine</string>
@@ -61,6 +63,7 @@
     <string name="text_theme">Theme</string>
     <string name="text_quit">Quit</string>
     <string name="sub_title_text_quit">Are you sure that you want to quit the app?</string>
+    <string name="sub_title_text_sign_out">Are you sure that you want to sign out your account?</string>
     <string name="yes_button">Yes</string>
     <string name="no_button">No</string>
 

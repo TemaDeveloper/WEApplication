@@ -38,6 +38,8 @@
     <string name="text_description">Description</string>
     <string name="text_donation_history">Historique de vos dons</string>
     <string name="text_sign_out">Se déconnecter</string>
+    <string name="text_logged_in">Connecté</string>
+    <string name = "sub_title_no_donations">Vous n\'avez pas encore de dons...</string>
 
     <!--SignUp Activity-->
     <string name="text_create">Créé un</string>
@@ -47,7 +49,7 @@
     <!--Learn More Fragment-->
     <string name="text_breakdown">Répartition des dons</string>
     <string name="text_info">Information</string>
-    <string name="text_sub_title_in_learn_more">L\'application WE nous aide à lutter contre l\'itinérance à Toronto et à investir pour y mettre fin. Ce n\'est pas LEUR problème, c\'est notre problème !</string>
+    <string name="text_sub_title_in_learn_more">WE est une application caritative conçue pour soutenir les sans-abri à Toronto. L\'application sert de plate-forme pour les personnes qui souhaitent contribuer au bien-être des sans-abri en leur fournissant un soutien financier.\n\nLes dons peuvent être effectués via l\'application, et le montant peut être aussi peu ou autant que l\'utilisateur souhaite contribuer .\n\nDans l\'ensemble, WE est une excellente initiative qui tire parti de la technologie pour fournir une plate-forme permettant aux personnes de soutenir la communauté des sans-abri à Toronto. La conception simple et intuitive de l\'application permet à quiconque de contribuer facilement à la cause et d\'aider à faire une différence dans la vie de ceux qui en ont le plus besoin.</string>
     <string name="text_home_and_education">Accueil &amp; Éducation</string>
     <string name="text_food">Nourriture</string>
     <string name="text_medicine">Médecine</string>
@@ -61,6 +63,7 @@
     <string name="text_theme">Thème</string>
     <string name="text_quit">Arrêter</string>
     <string name="sub_title_text_quit">Voulez-vous vraiment quitter l\'application?</string>
+    <string name="sub_title_text_sign_out">Êtes-vous sûr de vouloir vous déconnecter de votre compte?</string>
     <string name="yes_button">Oui</string>
     <string name="no_button">Non</string>
 
