@@ -61,7 +61,7 @@ public class SharedPrefManager {
     }
 
     public boolean getMode(){
-        Boolean state = context.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE).getBoolean(KEY_NIGHT, false);
+        Boolean state = context.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE).getBoolean(KEY_NIGHT, true);
         return state;
     }
 

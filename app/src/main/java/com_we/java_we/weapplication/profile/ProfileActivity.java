@@ -12,15 +12,11 @@ import android.view.Window;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.engine.DiskCacheStrategy;
-import com.bumptech.glide.request.RequestOptions;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.card.MaterialCardView;
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
@@ -28,7 +24,6 @@ import com.squareup.picasso.Picasso;
 
 import java.util.Collections;
 import java.util.List;
-import java.util.Random;
 
 import com_we.java_we.weapplication.R;
 import com_we.java_we.weapplication.adapters.AdapterMyDonations;
@@ -76,7 +71,7 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         loginCardView.setOnClickListener(this);
     }
 
-    private void provideRecyclerViewWithLayoutManager(){
+    private void provideRecyclerViewWithLayoutManager() {
         myDonationsRecyclerView.setHasFixedSize(true);
         myDonationsRecyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
@@ -91,10 +86,10 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
                 List<Donation> donations = response.body();
                 //reverse the list
                 Collections.reverse(donations);
-                if(donations.isEmpty()){
+                if (donations.isEmpty()) {
                     noDonationsTextView.setVisibility(View.VISIBLE);
                     myDonationsRecyclerView.setVisibility(View.GONE);
-                }else{
+                } else {
                     noDonationsTextView.setVisibility(View.GONE);
                     myDonationsRecyclerView.setVisibility(View.VISIBLE);
                     myDonationsRecyclerView.setAdapter(new AdapterMyDonations(donations));
@@ -145,6 +140,7 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
                     emailTextView.setText(userEmail);
                     //get my donations
                     getMyDonations(id);
+
                 }
 
                 @Override
@@ -156,21 +152,21 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         } else {
             editButton.setEnabled(false);
             Picasso.get().load(Uri.parse("http://192.168.2.245:8888/we_app/user_images/img_we_app_logo.png")).into(profileImageView);
-            emailTextView.setText("#user"+(int)Math.floor(Math.random() * (999 - 100 + 1) + 100));
+            emailTextView.setText("#user" + (int) Math.floor(Math.random() * (999 - 100 + 1) + 100));
         }
 
-        if(checkLogin(email)){
+        if (checkLogin(email)) {
             loginCardView.setEnabled(false);
             loginTextView.setText(getResources().getString(R.string.text_logged_in));
-        }else{
+        } else {
             loginCardView.setEnabled(true);
             loginTextView.setText(getResources().getString(R.string.text_log_in_button));
         }
 
     }
 
-    private boolean checkLogin(String email){
-        if(!email.equals("")){
+    private boolean checkLogin(String email) {
+        if (!email.equals("")) {
             return true;
         }
         return false;

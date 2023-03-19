@@ -54,5 +54,7 @@ public interface ApiInterface {
     @GET("raisedAmount.php")
     Call<List<Donation>> getAllRaisedMoney();
 
+    @GET("allUsers.php")
+    Call<List<User>> getAllUsers();
 
 }

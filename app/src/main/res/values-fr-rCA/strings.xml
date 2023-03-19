@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">WEApplication</string>
+    <string name="app_name">WEApp</string>
     <!--Donation Activity-->
     <string name="text_summary">Résumé</string>
     <string name="text_enter_amount">Somme d\'argent</string>
@@ -21,6 +21,7 @@
     <string name="text_log_in_button">Connexion</string>
     <string name="text_login_question">Vous n\'avez pas de compte?</string>
     <string name="text_sign_up">S\'inscrire</string>
+    <string name="text_as_guest_button">En tant qu\'invité</string>
 
     <!--Main Activity-->
     <string name="text_hello">Salut les Canadiens!</string>
@@ -49,7 +50,10 @@
     <!--Learn More Fragment-->
     <string name="text_breakdown">Répartition des dons</string>
     <string name="text_info">Information</string>
-    <string name="text_sub_title_in_learn_more">WE est une application caritative conçue pour soutenir les sans-abri à Toronto. L\'application sert de plate-forme pour les personnes qui souhaitent contribuer au bien-être des sans-abri en leur fournissant un soutien financier.\n\nLes dons peuvent être effectués via l\'application, et le montant peut être aussi peu ou autant que l\'utilisateur souhaite contribuer .\n\nDans l\'ensemble, WE est une excellente initiative qui tire parti de la technologie pour fournir une plate-forme permettant aux personnes de soutenir la communauté des sans-abri à Toronto. La conception simple et intuitive de l\'application permet à quiconque de contribuer facilement à la cause et d\'aider à faire une différence dans la vie de ceux qui en ont le plus besoin.</string>
+    <string name="text_sub_title_in_learn_more_1">WE est une application caritative conçue pour soutenir les sans-abri à Toronto. L\'application sert de plate-forme pour les personnes qui souhaitent contribuer au bien-être des sans-abri en leur fournissant un soutien financier.</string>
+    <string name="text_sub_title_in_learn_more_2">Les dons peuvent être effectués via l\'application, et le montant peut être aussi peu ou autant que l\'utilisateur souhaite contribuer.</string>
+    <string name="text_sub_title_in_learn_more_3">Dans l\'ensemble, WE est une excellente initiative qui tire parti de la technologie pour fournir une plate-forme permettant aux personnes de soutenir la communauté des sans-abri à Toronto. La conception simple et intuitive de l\'application permet à quiconque de contribuer facilement à la cause et d\'aider à faire une différence dans la vie de ceux qui en ont le plus besoin.</string>
+
     <string name="text_home_and_education">Accueil &amp; Éducation</string>
     <string name="text_food">Nourriture</string>
     <string name="text_medicine">Médecine</string>

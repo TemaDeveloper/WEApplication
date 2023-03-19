@@ -7,12 +7,15 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
+import androidx.core.content.ContextCompat;
 
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 import com.google.android.material.button.MaterialButton;
+import com.google.android.material.card.MaterialCardView;
 import com.google.android.material.textfield.TextInputEditText;
 import com.paypal.android.sdk.payments.PayPalConfiguration;
 import com.paypal.android.sdk.payments.PayPalPayment;
@@ -41,7 +44,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 
-public class DonationFragment extends BottomSheetDialogFragment {
+public class DonationFragment extends BottomSheetDialogFragment{
 
     //paypal
     public static final int PAYPAL_REQUEST_CODE = 7171;
@@ -61,6 +64,26 @@ public class DonationFragment extends BottomSheetDialogFragment {
         confirmationMaterialButton.setOnClickListener(view1 -> {
             donate();
             getPayment();
+        });
+
+
+        view.findViewById(R.id.card_view_ten_dollars).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                amountEditText.setText("10");
+            }
+        });
+        view.findViewById(R.id.card_view_twenty_five_dollars).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                amountEditText.setText("25");
+            }
+        });
+        view.findViewById(R.id.card_view_fifty_dollars).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                amountEditText.setText("50");
+            }
         });
         return view;
     }

@@ -1,5 +1,6 @@
 package com_we.java_we.weapplication.main;
 
+import android.animation.ObjectAnimator;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.res.Configuration;
@@ -8,6 +9,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.animation.DecelerateInterpolator;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
@@ -115,6 +117,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
                 raisedAmountText.setText("$ " + String.format("%,.1f", sum));
                 donationsSeekBar.setProgress((int)sum);
+                animateProgression((int)sum);
             }
 
             @Override
@@ -221,5 +224,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 bottomSheetDialogAdditionCheckFragment.show(getSupportFragmentManager(), "LearnMoreFragment");
                 break;
         }
+    }
+    private void animateProgression(int progress) {
+        final ObjectAnimator animation = ObjectAnimator.ofInt(donationsSeekBar, "progress", 0, progress);
+        animation.setDuration(3500);
+        animation.setInterpolator(new DecelerateInterpolator());
+        animation.start();
+        donationsSeekBar.clearAnimation();
     }
 }

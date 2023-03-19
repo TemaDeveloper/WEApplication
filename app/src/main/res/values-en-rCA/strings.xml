@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">WEApplication</string>
+    <string name="app_name">WEApp</string>
     <!--Donation Activity-->
     <string name="text_summary">Summary</string>
     <string name="text_enter_amount">Amount of Money</string>
@@ -21,6 +21,7 @@
     <string name="text_log_in_button">Log in</string>
     <string name="text_login_question">Do not have an account?</string>
     <string name="text_sign_up">Sign up</string>
+    <string name="text_as_guest_button">As Guest</string>
 
     <!--Main Activity-->
     <string name="text_hello">Hello Canadians!</string>
@@ -49,7 +50,9 @@
     <!--Learn More Fragment-->
     <string name="text_breakdown">Breakdown of donations</string>
     <string name="text_info">Information</string>
-    <string name="text_sub_title_in_learn_more">WE is a charitable application designed to support homeless people in Toronto. The app serves as a platform for individuals who want to contribute towards the welfare of homeless people by providing them with monetary support.\n\nDonations can be made through the app, and the amount can be as little or as much as the user wants to contribute.\n\nOverall, WE is an excellent initiative that leverages technology to provide a platform for people to support the homeless community in Toronto. The app\'s simple and intuitive design makes it easy for anyone to contribute to the cause and help make a difference in the lives of those who need it most.</string>
+    <string name="text_sub_title_in_learn_more_1">WE is a charitable application designed to support homeless people in Toronto. The app serves as a platform for individuals who want to contribute towards the welfare of homeless people by providing them with monetary support.</string>
+    <string name="text_sub_title_in_learn_more_2">Donations can be made through the app, and the amount can be as little or as much as the user wants to contribute.</string>
+    <string name="text_sub_title_in_learn_more_3">Overall, WE is an excellent initiative that leverages technology to provide a platform for people to support the homeless community in Toronto. The app\'s simple and intuitive design makes it easy for anyone to contribute to the cause and help make a difference in the lives of those who need it most.</string>
     <string name="text_home_and_education">Home &amp; Education</string>
     <string name="text_food">Food</string>
     <string name="text_medicine">Medicine</string>
