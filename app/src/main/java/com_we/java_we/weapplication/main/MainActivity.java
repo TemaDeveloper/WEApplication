@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         ApiInterface apiInterface = ApiClient.getApiService();
         String email = SharedPrefManager.getInstance(getApplicationContext()).getUserEmail();
         if (email.equals("")) {
-            Picasso.get().load(Uri.parse("http://192.168.2.245:8888/we_app/user_images/img_we_app_logo.png")).into(profileImage);
+            Picasso.get().load(Uri.parse("https://files.000webhost.com/handler.php?action=download?action=download&path=%2Fpublic_html%2Fwe%2Fuser_images%2Fimg_we_app_logo.png")).into(profileImage);
         } else {
             Call<User> callImage = apiInterface.getUser(email);
             callImage.enqueue(new Callback<User>() {
