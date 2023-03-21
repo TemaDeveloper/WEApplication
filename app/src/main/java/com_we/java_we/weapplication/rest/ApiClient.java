@@ -16,7 +16,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ApiClient {
-    private static final String ROOT_URL = "http://192.168.2.245:8888/we_app/";
+    private static final String ROOT_URL = "https://wetorontohomelessness.000webhostapp.com/we/";
 
     public static Retrofit retrofit = null;
 
