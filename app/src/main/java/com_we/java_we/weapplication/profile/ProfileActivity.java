@@ -151,7 +151,7 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
 
         } else {
             editButton.setEnabled(false);
-            Picasso.get().load(Uri.parse("http://192.168.2.245:8888/we_app/user_images/img_we_app_logo.png")).into(profileImageView);
+            Picasso.get().load(Uri.parse("https://wetorontohomelessness.000webhostapp.com/we/user_images/img_we_app_logo.png")).into(profileImageView);
             emailTextView.setText("#user" + (int) Math.floor(Math.random() * (999 - 100 + 1) + 100));
         }
 

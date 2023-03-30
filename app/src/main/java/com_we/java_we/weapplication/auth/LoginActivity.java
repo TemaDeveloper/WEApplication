@@ -64,8 +64,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                         if(u.getEmail().equals(EMAIL) && u.getPassword().equals(PASSWORD)){
                             login(EMAIL, PASSWORD);
                         }else{
-                            Toast.makeText(LoginActivity.this, "Wrong email or password", Toast.LENGTH_SHORT).show();
-                            break;
                         }
                     }
                 }
@@ -84,10 +82,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         callLogin.enqueue(new Callback<ResponseBody>() {
             @Override
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
-                if (response.isSuccessful()) {
                     SharedPrefManager.getInstance(getApplicationContext()).setUserEmail(EMAIL);
                     startActivity(new Intent(getApplicationContext(), ProfileActivity.class).putExtra("email", EMAIL));
-                }
             }
             @Override
             public void onFailure(Call<ResponseBody> call, Throwable t) {

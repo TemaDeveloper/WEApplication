@@ -58,7 +58,7 @@ public class SignupActivity extends AppCompatActivity {
 
         Call<ResponseBody> callRegister = apiInterface.registerUser(nameEditText.getText().toString(),
                 email, passwordEditText.getText().toString(),
-                "http://192.168.2.245:8888/we_app/user_images/img_we_app_logo.png");
+                "https://wetorontohomelessness.000webhostapp.com/we/user_images/img_we_app_logo.png");
         callRegister.enqueue(new Callback<ResponseBody>() {
             @Override
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
